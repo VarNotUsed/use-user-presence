@@ -4,7 +4,7 @@ import { EVENTS } from "./constants";
 
 export function useUserPresence({
   inactivityTimeoutMs,
-}: UseUserPresenceOptions): UseUserPresenceStates {
+}: UseUserPresenceOptions = {}): UseUserPresenceStates {
   const [isPresent, setIsPresent] = useState<boolean>(true);
   const isPresentRef = useRef<boolean>(true);
   const timerRef = useRef<number | undefined>(undefined);
