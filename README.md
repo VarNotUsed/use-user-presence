@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/use-user-presence.svg)](https://www.npmjs.com/package/use-user-presence)
 [![npm downloads](https://img.shields.io/npm/dm/use-user-presence.svg)](https://www.npmjs.com/package/use-user-presence)
-[![License](https://img.shields.io/npm/l/use-user-presence.svg)](https://github.com/VarNotUsed/use-user-presence/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/VarNotUsed/use-user-presence)](https://github.com/VarNotUsed/use-user-presence/blob/main/LICENSE)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/use-user-presence)](https://bundlephobia.com/package/use-user-presence)
 
 Lightweight React hook that helps you track user presence and activity status in your app. Perfect for chat applications, user status indicators, or auto-save features.
