@@ -1,0 +1,43 @@
+{
+	"name": "use-user-presence",
+	"version": "1.0.0",
+	"description": "React hook for tracking document visibility and window focus to determine user presence and activity.",
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.esm.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "rollup -c",
+		"format": "biome format --write ./",
+		"lint": "biome lint ./",
+		"size": "npm run build && size-limit"
+	},
+	"keywords": [],
+	"author": "VarNotUsed <varnotused@protonmail.com>",
+	"license": "Unlicense",
+	"packageManager": "pnpm@10.10.0",
+	"peerDependencies": {
+		"react": "^16.8.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@rollup/plugin-commonjs": "^28.0.3",
+		"@rollup/plugin-node-resolve": "^16.0.1",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^12.1.2",
+		"@types/react": "^19.1.4",
+		"rollup": "^4.40.2",
+		"typescript": "^5.8.3",
+		"@size-limit/preset-small-lib": "^11.2.0",
+		"size-limit": "^11.2.0"
+	},
+	"size-limit": [
+		{
+			"path": "dist/index.cjs.js",
+			"limit": "1 KB"
+		},
+		{
+			"path": "dist/index.esm.js",
+			"limit": "1 KB"
+		}
+	]
+}
