@@ -1,11 +1,8 @@
 export type UseUserPresenceOptions = {
-	enableInactivityTracking?: boolean;
-	inactivityTimeout?: number;
+  inactivityTimeoutMs?: number;
 };
 
 export type UseUserPresenceStates = {
-	/** Whether user is currently on the page */
-	isPresent: boolean;
-	/** Whether user is actively interacting (if enabled) */
-	isActive?: boolean;
+  /** Whether user is currently on the page or active (if timeout enabled) */
+  isPresent: boolean;
 };

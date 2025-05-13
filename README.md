@@ -40,19 +40,16 @@ function UserPresent() {
 import { useUserPresence } from "use-user-presence";
 
 function UserPresentAndActive() {
-  const { isPresent, isActive } = useUserPresence({
-    enableInactivityTracking: true,
-    inactivityTimeout: 60000 // 1 minute
+  const { isPresent } = useUserPresence({
+    inactivityTimeoutMs: 60000 // 1 minute
   });
 
   return (
     <div>
-      {!isPresent ? (
-        <span>Away</span>
-      ) : !isActive ? (
-        <span>Inactive</span>
+      {isPresent ? (
+        <span>Present</span>
       ) : (
-        <span>Active</span>
+        <span>Away</span>
       )}
     </div>
   );
