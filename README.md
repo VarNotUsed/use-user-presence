@@ -1,7 +1,6 @@
 # use-user-presence
 
 [![npm version](https://badge.fury.io/js/use-user-presence.svg)](https://www.npmjs.com/package/use-user-presence)
-[![npm downloads](https://img.shields.io/npm/dm/use-user-presence.svg)](https://www.npmjs.com/package/use-user-presence)
 [![License](https://img.shields.io/github/license/VarNotUsed/use-user-presence)](https://github.com/VarNotUsed/use-user-presence/blob/main/LICENSE)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/use-user-presence)](https://bundlephobia.com/package/use-user-presence)
 
