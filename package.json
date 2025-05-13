@@ -1,7 +1,7 @@
 {
 	"name": "use-user-presence",
 	"type": "module",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "React hook for tracking document visibility and window focus to determine user presence and activity.",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
