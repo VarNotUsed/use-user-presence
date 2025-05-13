@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       react:
-        specifier: ^16.8.0
+        specifier: '>=16.8.0'
         version: 16.14.0
     devDependencies:
       '@biomejs/biome':
