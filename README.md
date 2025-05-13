@@ -4,7 +4,14 @@
 [![License](https://img.shields.io/github/license/VarNotUsed/use-user-presence)](https://github.com/VarNotUsed/use-user-presence/blob/main/LICENSE)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/use-user-presence)](https://bundlephobia.com/package/use-user-presence)
 
-Lightweight React hook that helps you track user presence and activity status in your app. Perfect for chat applications, user status indicators, or auto-save features.
+### A lightweight React hook for detecting user presence. This hook monitors:
+- User visibility (tab active/inactive)
+- Window focus state (window focused/blurred) 
+- optional:
+  - Mouse interactions (clicks, movement)
+  - Keyboard input
+  - Touch events
+  - Scrolling
 
 ## Installation
 
@@ -35,11 +42,12 @@ function UserPresent() {
 }
 ```
 
-### Advanced Presence and Activity Tracking
+### Advanced Presence Detection with User Activity Tracking
+To activate user interaction tracking, set some number in `inactivityTimeoutMs` parameter when initializing the presence hook:
 ```tsx
 import { useUserPresence } from "use-user-presence";
 
-function UserPresentAndActive() {
+function UserPresent() {
   const { isPresent } = useUserPresence({
     inactivityTimeoutMs: 60000 // 1 minute
   });
