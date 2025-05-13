@@ -13,10 +13,7 @@
 			"types": "./dist/index.d.ts"
 		}
 	},
-	"files": [
-		"dist",
-    "dist/*.map"
-	],
+	"files": ["dist", "dist/*.map"],
 	"scripts": {
 		"build": "rm -rf dist && rollup -c",
 		"format": "biome format --write ./",
