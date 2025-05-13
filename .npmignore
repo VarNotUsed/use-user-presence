@@ -1,0 +1,25 @@
+# Development files
+src/
+tests/
+dev/
+*.test.ts
+*.test.tsx
+
+# Configuration files
+.github/
+biome.json
+
+# Version control
+.git/
+.gitignore
+
+# Build process
+node_modules/
+
+# Package manager files
+pnpm-lock.yaml
+
+# Size limit configuration
+.size-limit.js
+size-limit.json
+
