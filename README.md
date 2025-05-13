@@ -7,7 +7,7 @@
 ### A lightweight React hook for detecting user presence. This hook monitors:
 - User visibility (tab active/inactive)
 - Window focus state (window focused/blurred) 
-- optional:
+- optional through ```inactivityTimeoutMs``` parameter:
   - Mouse interactions (clicks, movement)
   - Keyboard input
   - Touch events
@@ -21,36 +21,15 @@ npm install use-user-presence
 pnpm add use-user-presence
 ```
 
-## Examples
-
-### Basic Presence Tracking
-```tsx
-import { useUserPresence } from "use-user-presence";
-
-function UserPresent() {
-  const { isPresent } = useUserPresence();
-
-  return (
-    <div>
-      {isPresent ? (
-        <span>Present</span>
-      ) : (
-        <span>Away</span>
-      )}
-    </div>
-  );
-}
-```
-
-### Advanced Presence Detection with User Activity Tracking
-To activate user interaction tracking, set some number in `inactivityTimeoutMs` parameter when initializing the presence hook:
+## Example
 ```tsx
 import { useUserPresence } from "use-user-presence";
 
 function UserPresent() {
   const { isPresent } = useUserPresence({
-    inactivityTimeoutMs: 60000 // 1 minute
-  });
+    /* Optional parameter to also track user-inactivity beside the base functionality */
+    inactivityTimeoutMs: 60000, // 1 minute
+  );
 
   return (
     <div>
