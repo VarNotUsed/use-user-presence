@@ -6,8 +6,9 @@ export function useUserPresence({
 	enableInactivityTracking = false,
 	inactivityTimeout = DEFAULT_TIMEOUT,
 }: UseUserPresenceOptions = {}): UseUserPresenceStates {
-	const [isPresent, setIsPresent] = useState(true);
-	const [isActive, setIsActive] = useState(true);
+	const [isPresent, setIsPresent] = useState<boolean>(true);
+	const [isActive, setIsActive] = useState<boolean>(true);
+	const isActiveRef = useRef<boolean>(true);
 	const timerRef = useRef<number | undefined>(undefined);
 
 	const handleFocus = useCallback(() => setIsPresent(true), []);
@@ -17,17 +18,19 @@ export function useUserPresence({
 		setIsPresent(document.visibilityState === "visible");
 	}, []);
 
-	const handleActivity = useCallback(() => {
-		setIsActive(true);
-	}, []);
-
 	const resetInactivityTimer = useCallback(() => {
-		handleActivity();
+		if (!isActiveRef.current) {
+			isActiveRef.current = true;
+			setIsActive(true);
+		}
 		window.clearTimeout(timerRef.current);
 		timerRef.current = window.setTimeout(() => {
-			setIsActive(false);
+			if (isActiveRef.current) {
+				isActiveRef.current = false;
+				setIsActive(false);
+			}
 		}, inactivityTimeout);
-	}, [handleActivity, inactivityTimeout]);
+	}, [inactivityTimeout]);
 
 	useEffect(() => {
 		try {
