@@ -5,7 +5,7 @@
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/use-user-presence)](https://bundlephobia.com/package/use-user-presence)
 
 ### A lightweight React hook for detecting user presence. This hook monitors:
-- User visibility (tab active/inactive)
+- Tab visibility (tab active/inactive)
 - Window focus state (window focused/blurred) 
 - optionally user inactivity through ```inactivityTimeoutMs``` parameter:
   - Mouse interactions (clicks, movement)
