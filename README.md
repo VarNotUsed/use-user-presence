@@ -24,12 +24,17 @@ pnpm add use-user-presence
 ## Example
 ```tsx
 import { useUserPresence } from "use-user-presence";
+import { useEffect } from "react";
 
 function UserPresent() {
   const { isPresent } = useUserPresence({
     /* Optional parameter to also track user inactivity beside the base functionality */
     inactivityTimeoutMs: 60000, // 1 minute
   );
+
+  useEffect(() => {
+    console.log(isPresent)
+  }, [isPresent]);
 
   return (
     <div>
